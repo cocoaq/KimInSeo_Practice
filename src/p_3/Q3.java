@@ -26,7 +26,7 @@ public class Q3 {
 		
 		System.out.print("(단발/롱) : ");
 		select = sc.nextLine().charAt(0);
-		System.out.println("(1. 드레스/2. 캐주얼/3. 우부복) : ");
+		System.out.println("(1. 드레스/2. 캐주얼/3. 우주복) : ");
 		num1 = sc.nextInt();
 		
 		if(select == '단') {
