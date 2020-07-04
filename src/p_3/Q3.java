@@ -7,8 +7,43 @@ public class Q3 {
 	public static void main(String[] args) {
 
 		/*<<제어문 문제>>
-		 * 목표 : 간단한 제어문으로 꾸미기를 해보자.
+		 * 목표 : 간단한 제어문으로 원하는 문장을 선택하여 완성 해보자.
 		 * 요구 : if문과 case문을 쓸것.
+		 * 출력 예시 :
+		 * 	머리 어깨 무릎 발 무릎 발~
+			(단발/롱) : 롱
+			(1. 원피스/2. 캐주얼/3. 운동복) : 2
+			||||||||
+			|(ㅇㅁㅇ)|
+			|| || ||
+			|     |
+			|     |
+			| | | |
+ 			 ▲   ▲ 
+ 			
+ 			
+ 			머리 어깨 무릎 발 무릎 발~
+			(단발/롱) : 단발
+			(1. 원피스/2. 캐주얼/3. 운동복) : 1
+			||||||||
+			|(ㅇㅅㅇ)|
+ 			 ||||||
+ 			 ||||||
+			||||||||
+  		      ▲  ▲ 
+  		      
+  		      
+  		         머리 어깨 무릎 발 무릎 발~
+			(단발/롱) : 롱
+			(1. 원피스/2. 캐주얼/3. 운동복) : 3
+			||||||||
+			|(ㅇㅁㅇ)|
+			|| || ||
+			|     |
+			(     )
+			|  |  |
+  			  ▲ ▲ 
+
 		 * */
 
 		Q3 q = new Q3();
@@ -18,31 +53,48 @@ public class Q3 {
 	public void Q3_1() {
 		char select;
 		int num1 = 0;
-		
+
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.println("머리 어깨 무릎 발 무릎 발~");
-		System.out.println("머리와 옷을 골라줘!");
-		
+
 		System.out.print("(단발/롱) : ");
 		select = sc.nextLine().charAt(0);
-		System.out.println("(1. 드레스/2. 캐주얼/3. 우주복) : ");
+		System.out.print("(1. 원피스/2. 캐주얼/3. 운동복) : ");
 		num1 = sc.nextInt();
-		
+
 		if(select == '단') {
-			System.out.print("단발머리~ 에 ");
-		}else if(select == '롤'){
-			System.out.print("긴생머리~ 에 ");
+			System.out.println("||||||||");
+			System.out.println("|(ㅇㅅㅇ)|");
+		}else if(select == '롱'){
+			System.out.println("||||||||");
+			System.out.println("|(ㅇㅁㅇ)|");
+			System.out.println("|| || ||");
 		}
-		
+
 		switch (num1) {
-		case 1:System.out.println("옷자락을 흩날리네~");break;
-		case 2:System.out.println("청바지를 입고 있네~");break;
-		case 3:System.out.println("머리가 보이지도 않네~");break;
+		case 1:
+			System.out.println(" ||||||");
+			System.out.println(" ||||||");
+			System.out.println("||||||||");
+			System.out.println("  ▲  ▲ ");
+			break;
+		case 2:
+			System.out.println("|     |");
+			System.out.println("|     |");
+			System.out.println("| | | |");
+			System.out.println(" ▲   ▲ ");
+			break;
+		case 3:
+			System.out.println("|     |");
+			System.out.println("(     )");
+			System.out.println("|  |  |");
+			System.out.println("  ▲ ▲ ");
+			break;
 
 		default:System.out.println("룰루랄라");break;
 		}
-		
+
 	}
 
 }
