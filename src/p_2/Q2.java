@@ -6,10 +6,39 @@ public class Q2 {
 
 	public static void main(String[] args) {
 
-		/*<<연산자 문제>>
-		 * 목표 : 전위와 후위 연산자를 다시 되짚고, 이중 삼항 연산자를 써보자.
+		/*<<연산자 문제1>>
+		 * 목표 : 전위와 후위 연산자를 다시 되짚자.
 		 * 요구 : 전위와 후위의 차이점이 도드라지게 출력될 것.
-		 * 		삼항연산자를 통해 분기문처럼 사용해 볼 것.
+		 * 
+		 * 입력 예시 : 3  3
+		 * 출력 예시 : 
+		 * 	전위 연산자 : 3
+			후위 연산자 : 3
+			============================
+			연산 전
+			3
+			3
+			============================
+			연산 중
+			4
+			3
+			============================
+			연산 이후
+			4
+			4
+		 * */
+		/*<<연산자 문제2>>
+		 * 목표 : 이중 삼항 연산자를 사용하여 입력받은 키와 몸무계로 헌혈이 가능한지 간단하게 판별하는 프로그램을 작성하자.
+		 * 요구 : 삼항연산자를 통해 분기문처럼 사용해 볼 것. 
+		 * 		키와 몸무계는 실수형으로 입력받을 것.
+		 * 		키는 160cm이상, 몸무계는 45kg이상 일시 헌혈이 가능함.
+		 * 출력 예시 : 
+		 * 	===헌혈 자가 진단===
+			키 : 130
+			몸무계 :80
+			불가능
+
+		 * 
 		 * */
 
 		Q2 q = new Q2();
@@ -50,21 +79,20 @@ public class Q2 {
 
 	private void Q2_2() {
 
-		double kg_;
-		int cm;
-		boolean yes = false;
+		double kg;
+		double cm;
 
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("===헌혈 자가 진단===");
 
 		System.out.print("키 : ");
-		kg_ = sc.nextDouble();
+		kg = sc.nextDouble();
 		System.out.print("몸무계 :");
-		cm = sc.nextInt();
+		cm = sc.nextDouble();
 		
-		yes = (kg_ > 45.0) && (cm > 160.0)? yes == true : yes == false;
 		
-		System.out.println(yes);
+		System.out.println(
+		(cm <= 160.0)? "불가능" : (kg <= 45.0)? "불가능" : "가능" );
 	}
 }
