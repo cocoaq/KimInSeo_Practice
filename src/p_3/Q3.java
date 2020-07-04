@@ -63,7 +63,7 @@ public class Q3 {
 		System.out.print("(1. 원피스/2. 캐주얼/3. 운동복) : ");
 		num1 = sc.nextInt();
 
-		if(select == '단') {
+		if(select == '단발') {
 			System.out.println("||||||||");
 			System.out.println("|(ㅇㅅㅇ)|");
 		}else if(select == '롱'){
