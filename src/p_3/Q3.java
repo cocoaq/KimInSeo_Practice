@@ -58,12 +58,12 @@ public class Q3 {
 
 		System.out.println("¸Ó¸® ¾î±ú ¹«¸­ ¹ß ¹«¸­ ¹ß~");
 
-		System.out.print("(´Ü¹ß/·Õ) : ");
+		System.out.print("(´Ü/·Õ) : ");
 		select = sc.nextLine().charAt(0);
 		System.out.print("(1. ¿øÇÇ½º/2. Ä³ÁÖ¾ó/3. ¿îµ¿º¹) : ");
 		num1 = sc.nextInt();
 
-		if(select == '´Ü¹ß') {
+		if(select == '´Ü') {
 			System.out.println("||||||||");
 			System.out.println("|(¤·¤µ¤·)|");
 		}else if(select == '·Õ'){
