@@ -58,7 +58,7 @@ public class Q3 {
 
 		System.out.println("머리 어깨 무릎 발 무릎 발~");
 
-		System.out.print("(단발/롱) : ");
+		System.out.print("(단/롱) : ");
 		select = sc.nextLine().charAt(0);
 		System.out.print("(1. 원피스/2. 캐주얼/3. 운동복) : ");
 		num1 = sc.nextInt();
