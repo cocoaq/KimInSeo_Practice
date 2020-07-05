@@ -29,9 +29,9 @@ public class Q5 {
 		num2 = sc.nextInt();
 		arr = new int[num1][num2];
 
-		for(int i = 0; i <= num2 - 1; i++) {
-			for(int j = 0; j <= num1 - 1; j++) {
-				System.out.print(arr[j][i]);
+		for(int i = 0; i <= num1 - 1; i++) {
+			for(int j = 0; j <= num2 - 1; j++) {
+				System.out.print(arr[i][j]);
 			}
 			System.out.println("");
 		}
