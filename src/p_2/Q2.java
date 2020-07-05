@@ -30,7 +30,7 @@ public class Q2 {
 		/*<<연산자 문제2>>
 		 * 목표 : 이중 삼항 연산자를 사용하여 입력받은 키와 몸무계로 헌혈이 가능한지 간단하게 판별하는 프로그램을 작성하자.
 		 * 요구 : 삼항연산자를 통해 분기문처럼 사용해 볼 것. 
-		 * 		키와 몸무계는 실수형으로 입력받을 것.
+		 * 		키와 몸무계는 정수형으로 입력받을 것.
 		 * 		키는 160cm이상, 몸무계는 45kg이상 일시 헌혈이 가능함.
 		 * 출력 예시 : 
 		 * 	===헌혈 자가 진단===
@@ -42,7 +42,7 @@ public class Q2 {
 		 * */
 
 		Q2 q = new Q2();
-		q.Q2_1();
+//		q.Q2_1();
 		q.Q2_2();
 	}
 
@@ -79,20 +79,20 @@ public class Q2 {
 
 	private void Q2_2() {
 
-		double kg;
-		double cm;
+		int cm;
+		int kg;
 
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("===헌혈 자가 진단===");
 
 		System.out.print("키 : ");
-		kg = sc.nextDouble();
+		cm = sc.nextInt();
 		System.out.print("몸무계 :");
-		cm = sc.nextDouble();
+		kg = sc.nextInt();
 		
 		
 		System.out.println(
-		(cm <= 160.0)? "불가능" : (kg <= 45.0)? "불가능" : "가능" );
+		(cm >= 160)? ((kg >= 45)? "가능" :"불가능") : "불가능" );
 	}
 }
