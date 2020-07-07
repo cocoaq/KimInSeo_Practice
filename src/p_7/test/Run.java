@@ -26,6 +26,29 @@ public class Run {
 		 *		-이 외는 출력 예시를 참고한다.
 		 *
 		 * 출력 예시 : 
+		 * 	샌드위치 가게입니다.
+			1. JamToast
+			2. TunaSandwich
+			메뉴 번호 입력 : 1
+			(    )
+			■■■■■■
+			======
+샌드위치 가게입니다.
+1. JamToast
+2. TunaSandwich
+메뉴 번호 입력 : 3
+그런 메뉴는 없습니다.
+
+샌드위치 가게입니다.
+1. JamToast
+2. TunaSandwich
+메뉴 번호 입력 : 2
+(    )
+######
+======
+
+
+
 		 * */
 		Sandwich sw = new JamToast();
 		Sandwich sw2 = new TunaSand();
