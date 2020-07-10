@@ -20,7 +20,7 @@ public class Puser {
 	public int getLife() {
 		return life;
 	}
-	public int setLife() {
+	public int setLife(int life) {
 		return this.life = life;
 	}
 	public boolean isYou() {
@@ -31,7 +31,7 @@ public class Puser {
 	}
 	@Override
 	public String toString() {
-		return "유저 이름 : " + name + "\n남은 생명 : " + life + "\n얻은 것 : " + you ;
+		return "유저 이름 : " + name + "\n생명 : " + life  ;
 	}
 
 

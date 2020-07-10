@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Manager extends Puser{
 	Scanner sc = new Scanner(System.in);
 	int num;
-	int score = setLife();
+	int score = 0;
 
 
 	public Manager(String name, int life, boolean you) {
@@ -15,7 +15,8 @@ public class Manager extends Puser{
 
 	public void start(String name) {
 
-		System.out.println("아하~ " + getName() + "님 이군요!");
+		System.out.println(getName() + "님 이군요!");
+		setYou(false);
 		while (isYou() == false) {
 
 
@@ -38,29 +39,37 @@ public class Manager extends Puser{
 	}
 
 	private void QnA() {
-		System.out.print("Q.1 거미의 다리 갯수는? : ");
-		num = sc.nextInt();
-		if(num == 6) {
-			System.out.println("정답");
-			System.out.print("Q.2 결혼반지는 몇번째 손가락에 끼는가? : ");
+		if(getLife() != 0) {
+			System.out.print("Q.1 거미의 다리 갯수는? : ");
 			num = sc.nextInt();
-			if(num == 4) {
+			if(num == 6) {
 				System.out.println("정답");
-				System.out.print("Q.3 개나리 꽃의 꽃잎 수는? : ");
+				System.out.print("Q.2 결혼반지는 몇번째 손가락에 끼는가? : ");
 				num = sc.nextInt();
-				if(num == 1){
+				if(num == 4) {
 					System.out.println("정답");
-					System.out.println("Score : " + getLife());
-					setYou(true);
+					System.out.print("Q.3 개나리 꽃의 꽃잎 수는? : ");
+					num = sc.nextInt();
+					if(num == 1){
+						System.out.println("정답");
+						setYou(true);
+						start(getName());
 
+					}else {
+						setLife((getLife() - 1));
+						System.out.println("탈락. " + getLife() + " 남았습니다.");
+					}
 				}else {
-					score =  getLife() - 1;
+					setLife((getLife() - 1));
+					System.out.println("탈락. " + getLife() + " 남았습니다.");
 				}
 			}else {
-				score =  getLife() - 1;
+				setLife((getLife() - 1));
+				System.out.println("탈락. " + getLife() + " 남았습니다.");
 			}
-		}else {
-			score =  getLife() - 1;
+		}else if(getLife() == 0) {
+			System.out.println("당신은 죽었습니다.");
+			System.exit(0);
 		}
 	}
 
