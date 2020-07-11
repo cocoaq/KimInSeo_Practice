@@ -19,8 +19,6 @@ public class Manager extends Puser{
 		setYou(false);
 		while (isYou() == false) {
 
-
-
 			System.out.println("정보 출력 : 1 ");
 			System.out.println("문제 풀기 : 2");
 			System.out.println("나가기 : 3");
@@ -39,6 +37,9 @@ public class Manager extends Puser{
 	}
 
 	private void QnA() {
+		
+		char yn;
+		
 		if(getLife() != 0) {
 			System.out.print("Q.1 거미의 다리 갯수는? : ");
 			num = sc.nextInt();
@@ -51,10 +52,21 @@ public class Manager extends Puser{
 					System.out.print("Q.3 개나리 꽃의 꽃잎 수는? : ");
 					num = sc.nextInt();
 					if(num == 1){
-						System.out.println("정답");
-						setYou(true);
-						start(getName());
+						System.out.println("정답 , 문제를 모두 맞추셨어요!");
+						System.out.println("==당신의 기록==");
+						System.out.println(toString());
 
+						System.out.print("Q."+getName()+"님. 다시 하시겠습니까? (Y/N) : ");
+						yn = sc.next().charAt(0);
+
+						if((yn == 'y') || (yn == 'Y')) {
+							setYou(true);
+							setLife(3);
+							start(getName());
+						}else if((yn == 'n') || (yn == 'N')) {
+							System.out.println("다음에 다시 만나요!");
+							System.exit(0);
+						}
 					}else {
 						setLife((getLife() - 1));
 						System.out.println("탈락. " + getLife() + " 남았습니다.");
