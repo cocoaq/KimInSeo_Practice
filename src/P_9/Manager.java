@@ -19,18 +19,20 @@ public class Manager extends Puser{
 		setYou(false);
 		while (isYou() == false) {
 
-			System.out.println("정보 출력 : 1 ");
-			System.out.println("문제 풀기 : 2");
-			System.out.println("나가기 : 3");
-			System.out.print("입력하기 : ");
+			System.out.println("");
+			System.out.println("-정보 출력 : 1 ");
+			System.out.println("-문제 풀기 : 2");
+			System.out.println("-나가기 : 3");
+			System.out.print("--입력하기 : ");
 			num = sc.nextInt();
+			System.out.println("");
 
 			switch (num) {
 			case 1: System.out.println(toString());break;
 			case 2: QnA();break;
 			case 3: return;
 
-			default: System.out.println("잘못된 입력");
+			default: System.out.println("~잘못된 입력~");
 			break;
 			}
 		}
@@ -44,11 +46,11 @@ public class Manager extends Puser{
 			System.out.print("Q.1 거미의 다리 갯수는? : ");
 			num = sc.nextInt();
 			if(num == 6) {
-				System.out.println("정답");
+				System.out.println("*정답*");
 				System.out.print("Q.2 결혼반지는 몇번째 손가락에 끼는가? : ");
 				num = sc.nextInt();
 				if(num == 4) {
-					System.out.println("정답");
+					System.out.println("*정답*");
 					System.out.print("Q.3 개나리 꽃의 꽃잎 수는? : ");
 					num = sc.nextInt();
 					if(num == 1){
@@ -64,20 +66,20 @@ public class Manager extends Puser{
 							setLife(3);
 							start(getName());
 						}else if((yn == 'n') || (yn == 'N')) {
-							System.out.println("다음에 다시 만나요!");
+							System.out.println("*다음에 다시 만나요!*");
 							System.exit(0);
 						}
 					}else {
 						setLife((getLife() - 1));
-						System.out.println("탈락. " + getLife() + " 남았습니다.");
+						System.out.println("~탈락. " + getLife() + " 남았습니다.");
 					}
 				}else {
 					setLife((getLife() - 1));
-					System.out.println("탈락. " + getLife() + " 남았습니다.");
+					System.out.println("~탈락. " + getLife() + " 남았습니다.");
 				}
 			}else {
 				setLife((getLife() - 1));
-				System.out.println("탈락. " + getLife() + " 남았습니다.");
+				System.out.println("~탈락. " + getLife() + " 남았습니다.");
 			}
 		}else if(getLife() == 0) {
 			System.out.println("당신은 죽었습니다.");
