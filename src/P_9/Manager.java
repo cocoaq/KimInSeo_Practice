@@ -45,7 +45,7 @@ public class Manager extends Puser{
 		if(getLife() != 0) {
 			System.out.print("Q.1 거미의 다리 갯수는? : ");
 			num = sc.nextInt();
-			if(num == 6) {
+			if(num == 8) {
 				System.out.println("*정답*");
 				System.out.print("Q.2 결혼반지는 몇번째 손가락에 끼는가? : ");
 				num = sc.nextInt();
